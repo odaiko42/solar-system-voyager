@@ -1,0 +1,119 @@
+# Solar System 3D Simulator - Requirements & Project Information
+# ================================================================
+
+# PROJECT METADATA
+# ================
+Project Name: Solar Asteroid Voyager
+Version: 1.0.0
+Author: Emmanuel Forgues
+Email: solarsystem@forgues.eu
+Date: August 19, 2025
+License: MIT
+Description: Simulateur 3D interactif du système solaire avec mécanique apsidiale avancée
+
+# SYSTEM REQUIREMENTS
+# ===================
+Node.js: >= 18.0.0
+npm: >= 8.0.0
+Browser: Modern browsers with WebGL 2.0 support
+
+# RUNTIME DEPENDENCIES
+# ====================
+React: ^18.3.10
+React DOM: ^18.3.1
+Three.js: ^0.170.0
+React Three Fiber: ^8.17.10
+React Three Drei: ^9.118.1
+TypeScript: ^5.8.3
+
+# UI FRAMEWORK
+# ============
+Tailwind CSS: ^3.4.17
+Radix UI: Multiple components (accordion, dialog, etc.)
+Lucide React: ^0.468.0 (Icons)
+Recharts: ^2.13.3 (Charts)
+
+# FORM & VALIDATION
+# =================
+React Hook Form: ^7.54.2
+Zod: ^3.24.1
+Hookform Resolvers: ^3.10.0
+
+# UTILITIES
+# =========
+Class Variance Authority: ^0.7.1
+clsx: ^2.1.1
+Tailwind Merge: ^2.6.0
+Date-fns: ^4.1.0
+Sonner: ^1.7.3
+
+# BUILD TOOLS
+# ===========
+Vite: ^5.4.19
+ESLint: ^9.32.0
+Autoprefixer: ^10.4.21
+PostCSS: ^8.5.6
+
+# DEVELOPMENT DEPENDENCIES
+# ========================
+@types/react: ^18.3.23
+@types/react-dom: ^18.3.7
+@vitejs/plugin-react-swc: ^3.11.0
+TypeScript ESLint: ^8.38.0
+
+# INSTALLATION COMMANDS
+# =====================
+# 1. Clone or download the project
+# 2. Navigate to project directory: cd solar-asteroid-voyager-main
+# 3. Install dependencies: npm install
+# 4. Start development server: npm run dev
+# 5. Build for production: npm run build
+# 6. Preview production build: npm run preview
+
+# BROWSER COMPATIBILITY
+# =====================
+Chrome: >= 88
+Firefox: >= 85
+Safari: >= 14
+Edge: >= 88
+
+# FEATURES IMPLEMENTED
+# ====================
+✓ 3D Solar System with realistic orbital mechanics
+✓ Kepler equation solving for precise planetary positions
+✓ Asteroid belt and Kuiper belt visualization
+✓ Advanced apsidal mechanics (perihelion/aphelion)
+✓ Moon systems with realistic materials
+✓ Interactive 3D navigation
+✓ Scientific orbital calculations
+✓ Responsive design
+✓ Custom favicon
+✓ Real astronomical data integration
+
+# SCIENTIFIC ACCURACY
+# ===================
+✓ NASA/JPL orbital parameters
+✓ Real astronomical textures (USGS)
+✓ Accurate planetary distances and periods
+✓ Gravitational resonances modeling
+✓ Orbital precession effects
+✓ TNO (Trans-Neptunian Objects) data
+
+# PERFORMANCE OPTIMIZATIONS
+# =========================
+✓ Level of Detail (LOD) rendering
+✓ Distance-based object culling
+✓ Efficient particle systems
+✓ Memoized orbital calculations
+✓ WebGL 2.0 optimizations
+
+# CONTACT & SUPPORT
+# =================
+Author: Emmanuel Forgues
+Email: solarsystem@forgues.eu
+Project: Solar System 3D Simulator
+Version: 1.0.0
+Created: August 19, 2025
+
+# END OF REQUIREMENTS
+# ===================

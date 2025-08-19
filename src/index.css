@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Space-themed color palette */
+    --background: 225 40% 4%;
+    --foreground: 210 100% 95%;
+
+    --card: 225 25% 8%;
+    --card-foreground: 210 100% 95%;
+
+    --popover: 225 25% 8%;
+    --popover-foreground: 210 100% 95%;
+
+    --primary: 250 100% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 225 15% 15%;
+    --secondary-foreground: 210 100% 90%;
+
+    --muted: 225 15% 10%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 280 100% 70%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 225 15% 20%;
+    --input: 225 15% 15%;
+    --ring: 250 100% 60%;
+
+    /* Cosmic colors */
+    --cosmic-blue: 220 100% 50%;
+    --cosmic-purple: 280 100% 70%;
+    --cosmic-cyan: 190 100% 60%;
+    --stellar-gold: 45 100% 70%;
+    --nebula-pink: 320 70% 65%;
+    --space-black: 225 50% 2%;
+    --star-white: 0 0% 95%;
+
+    /* Gradients */
+    --gradient-cosmic: linear-gradient(135deg, hsl(var(--cosmic-blue)), hsl(var(--cosmic-purple)));
+    --gradient-stellar: linear-gradient(45deg, hsl(var(--stellar-gold)), hsl(var(--nebula-pink)));
+    --gradient-nebula: linear-gradient(180deg, hsl(var(--cosmic-purple) / 0.3), hsl(var(--cosmic-cyan) / 0.2));
+
+    /* Effects */
+    --glow-cosmic: 0 0 30px hsl(var(--cosmic-blue) / 0.5);
+    --glow-stellar: 0 0 40px hsl(var(--stellar-gold) / 0.6);
+    --shadow-space: 0 10px 30px hsl(var(--space-black) / 0.8);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Enhanced space theme for dark mode */
+    --background: 225 60% 2%;
+    --foreground: 210 100% 98%;
+
+    --card: 225 40% 6%;
+    --card-foreground: 210 100% 98%;
+
+    --popover: 225 40% 6%;
+    --popover-foreground: 210 100% 98%;
+
+    --primary: 250 100% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 225 20% 12%;
+    --secondary-foreground: 210 100% 95%;
+
+    --muted: 225 20% 8%;
+    --muted-foreground: 215 25% 70%;
+
+    --accent: 280 100% 75%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 225 20% 18%;
+    --input: 225 20% 12%;
+    --ring: 250 100% 65%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground overflow-hidden;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  /* Cosmic animations */
+  @keyframes cosmic-pulse {
+    0%, 100% { box-shadow: var(--glow-cosmic); }
+    50% { box-shadow: 0 0 50px hsl(var(--cosmic-blue) / 0.8); }
+  }
+
+  @keyframes stellar-glow {
+    0%, 100% { box-shadow: var(--glow-stellar); }
+    50% { box-shadow: 0 0 60px hsl(var(--stellar-gold) / 0.9); }
+  }
+
+  @keyframes orbit {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes scale-in {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+
+  @keyframes slide-up {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  /* Glass morphism for space UI */
+  .glass-panel {
+    background: hsl(var(--card) / 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--border) / 0.3);
+    box-shadow: var(--shadow-space);
+  }
+
+  .cosmic-button {
+    background: var(--gradient-cosmic);
+    animation: cosmic-pulse 3s ease-in-out infinite;
+  }
+
+  .stellar-text {
+    background: var(--gradient-stellar);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
